@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="SQLite - django test 1" uuid="f57fd4c5-2f98-41c5-a2a8-efd521e619e9">
+    <database-info product="SQLite" version="3.7.6.3" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+  </data-source>
+  <data-source source="LOCAL" name="SQLite - django test 1a" uuid="a6379393-b38a-44fe-968a-402a4bd2857f">
+    <database-info product="SQLite" version="3.6.14.2" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+  </data-source>
+</component>
