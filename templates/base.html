@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        #sidebar {
+            float: left;
+            width: 200px;
+            border: 1px solid #000;
+        }
+        #content {
+            float: left;
+            width: 600px;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+
+        <p>This is my page</p>
+
+        <div id="sidebar">
+
+            {% block sidebar %}
+            {% endblock %}
+
+        </div>
+
+        <div id="content">
+            {% block content %}
+                this is the content area
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
