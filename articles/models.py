@@ -10,3 +10,6 @@ class Article(models.Model):
 
     def __unicode__(self):
         return self.title + " yeah"
+
+class Fred(models.Model):
+    title = models.CharField(max_length=200)

@@ -36,7 +36,7 @@ def hello2_simple(request):
 
 # ARTICLE STUFF (note, django_test_1 should be renamed 'article')
 
-from django_test_1.models import Article
+from articles.models import Article
 
 def articles(request):
     return render_to_response('articles.html',
