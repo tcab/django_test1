@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -5,29 +6,10 @@
     <title></title>
 
     <style>
-        body {
-            text-align: center;
-        }
-
-        #page {
-            width: 960px;
-            text-align: left;
-            margin: 10px auto 20px auto;
-            background-color: #bec00b;
-        }
-        
-        #sidebar {
-            float: left;
-            width: 200px;
-            border: 1px solid #000;
-        }
-        #content {
-            float: left;
-            width: 600px;
-            border: 1px solid #000;
-            padding: 10px;
-        }
     </style>
+
+    <link rel="stylesheet" type="text/css" href="{% static "assets/css/default.css" %}">
+
 </head>
 <body>
     <div id="page">
@@ -51,8 +33,11 @@
 
         <div id="content">
             {% block content %}
-                this is the content area
+                this is the content area and will be overridden every time.
             {% endblock %}
+
+            <img src="{% static "assets/images/python-powered-h-140x182.png" %}" />
+
         </div>
     </div>
 </body>
