@@ -25,8 +25,16 @@
 
         <div id="sidebar">
 
+            {# Base, inherited sidebar, unless you 'override'#}
             {% block sidebar %}
+                <ul>
+                    <li><a href="/admin">Admin</a> </li>
+                    <li>total nonsense here</li>
+                    <li>and more nonsense here</li>
+                    <li>and here <b>too</b>.</li>
+                </ul>
             {% endblock %}
+
 
         </div>
 
