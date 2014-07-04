@@ -87,6 +87,8 @@ USE_TZ = True
 #     ('assets', os.path.join(BASE_DIR, 'static'))
 # )
 
+# Theoretically STATIC_URL could be something like "http://media.lawrence.com/static/"
+
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = "/static/"
 STATICFILES_DIRS = (
