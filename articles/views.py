@@ -46,9 +46,13 @@ def articles(request):
     if 'lang' in request.COOKIES:
         language = request.COOKIES['lang']
 
+    if 'lang' in request.session:
+        session_language = request.session['lang']
+
     return render_to_response('articles.html',
                               { 'articles': Article.objects.all(),
-                                'language': language
+                                'language': language,
+                                'session_language': session_language
                                 })
 
 def article(request, article_id=1):
@@ -57,5 +61,6 @@ def article(request, article_id=1):
 
 def setlanguage(request, language='en-au'):
     response = HttpResponse("setting language to %s" % language)
-    response.set_cookie('lang', language)
+    response.set_cookie('lang', language) # Notice this sets on client's browser
+    request.session['lang'] = language  # Notice this is set on the server session dict
     return response
