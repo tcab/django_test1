@@ -8,6 +8,7 @@ from django.views.generic.base import TemplateView
 
 # cheating
 from django.shortcuts import render_to_response
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -39,9 +40,22 @@ def hello2_simple(request):
 from articles.models import Article
 
 def articles(request):
+    language = 'en-au'
+    session_language = 'en-au'
+
+    if 'lang' in request.COOKIES:
+        language = request.COOKIES['lang']
+
     return render_to_response('articles.html',
-                              { 'articles': Article.objects.all() })
+                              { 'articles': Article.objects.all(),
+                                'language': language
+                                })
 
 def article(request, article_id=1):
     return render_to_response('article.html',
                               { 'article': Article.objects.get(id=article_id) })
+
+def setlanguage(request, language='en-au'):
+    response = HttpResponse("setting language to %s" % language)
+    response.set_cookie('lang', language)
+    return response
