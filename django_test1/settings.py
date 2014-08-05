@@ -118,5 +118,13 @@ python manage.py migrate articles
 python manage.py convert_to_south articles
 python manage.py migrate articles  # not necessary - will say you are already at head
 
+# our first migration, after adding a field
+python manage.py schemamigration articles --auto
+python manage.py migrate articles
+
+# Listing current migrations
+manage.py migrate --list
+# Help
+python manage.py migrate --help
 
 """
