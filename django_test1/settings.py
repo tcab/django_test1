@@ -127,4 +127,7 @@ manage.py migrate --list
 # Help
 python manage.py migrate --help
 
+# downgrade
+python manage.py migrate articles 0001
+
 """
