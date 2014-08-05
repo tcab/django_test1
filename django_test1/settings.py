@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'south',
     'articles',
 )
 
@@ -100,3 +101,22 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
     os.path.join(BASE_DIR,  'articles/templates'),
 )
+
+"""
+ANDY NOTES:
+
+South Migrations
+================
+pip install South
+python manage.py syncdb django_test1
+
+# use south from the beginning
+python manage.py schemamigration articles --init
+python manage.py migrate articles
+
+# converting to south
+python manage.py convert_to_south articles
+python manage.py migrate articles  # not necessary - will say you are already at head
+
+
+"""

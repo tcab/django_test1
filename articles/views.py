@@ -19,6 +19,7 @@ def hello(request):
 
 def hello2(request):
     name = "Mike"
+    print 'hello2 was called!!'
     t = get_template('hello2.html')
     html = t.render(Context({'name': name, 'info': [1,2,3]}))
     return HttpResponse(html)
