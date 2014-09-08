@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',  # for ipython notebook integration
+    'rest_framework',     # for rest API development
     'south',
     'articles',
 )
