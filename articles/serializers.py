@@ -20,3 +20,14 @@ serializer = ArticleSerializer(a1)
 print serializer.data
 
 """
+
+# Adapted from official Django REST framework website
+# http://www.django-rest-framework.org/
+
+from rest_framework import routers, serializers, viewsets
+
+# ViewSets define the view behavior.
+class ArticleViewSet(viewsets.ModelViewSet):
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
+
